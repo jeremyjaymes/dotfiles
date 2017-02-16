@@ -1,4 +1,5 @@
-# Taps
+cask_args appdir: '/Applications'
+
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
@@ -16,56 +17,52 @@ brew 'coreutils'
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew 'findutils'
 
-# Install Bash 4
-brew 'bash'
-
 # Install more recent versions of some macOS tools
 brew 'homebrew/dupes/grep'
 
-# Install Binaries
+brew 'ack'
 brew 'awscli'
+brew 'fswatch'
+brew 'gettext'
 brew 'git'
-brew 'hub'
-brew 'tree'
-brew 'mackup'
+brew 'go'
+brew 'imagemagick'
 brew 'mas'
+brew 'openssl'
 brew 'node'
-brew 'trash'
+brew 'readline'
+brew 'tmux'
+brew 'unrar'
+brew 'vim', args: ['--override-system-vi']
 brew 'wget'
+brew 'yarn'
 
 # Development
 brew 'php71', args: ['with-debug']
 brew 'php71-intl'
 brew 'mariadb'
 
-# Apps
-cask 'aerial'
+#cask 'mapbox-studio'
 cask 'alfred'
-cask 'caffeine'
+cask 'arq'
+cask 'diffmerge'
 cask 'dropbox'
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-drive'
 cask 'iterm2'
-cask 'mysqlworkbench'
-cask 'phpstorm'
-cask 'quip'
+cask 'keepassx'
+cask 'poedit'
+cask 'postman'
+cask 'rescuetime'
 cask 'sequel-pro'
 cask 'slack'
 cask 'sublime-text'
-cask 'tower'
 cask 'transmit'
+cask 'tunnelbear'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
-cask 'vlc'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
 
 # Fonts
 cask 'font-sauce-code-powerline'
@@ -73,12 +70,10 @@ cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
-# Install Mac App Store apps
-mas '1Password', id: 443987910
-mas 'Byword', id: 420212497
-mas 'Deckset', id: 847496013
-mas 'Giphy Capture', id: 668208984
-mas 'Paw', id: 584653203
-mas 'Sip', id: 507257563
-mas 'Sketch', id: 402476602
-mas 'Tweetbot', id: 557168941
+# Install App Store apps
+mas 'aText', id: 488566438
+mas 'Bear', id: 1091189122
+mas 'CloudApp', id: 417602904
+mas 'Harvest', id: 506189836
+mas 'Keka', id: 470158793
+mas 'Todoist', id: 585829637

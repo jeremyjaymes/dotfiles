@@ -18,3 +18,6 @@ export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
 # Local bin directories before anything else
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# Yarn
+export PATH="$PATH:`yarn global bin`"
