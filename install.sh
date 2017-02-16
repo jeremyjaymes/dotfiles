@@ -28,7 +28,8 @@ then
     php -r "unlink('composer-setup.php');"
 fi
 
-if [ -f composer.phar ];
+if [ -f composer.phar ]; 
+then
   mv composer.phar /usr/local/bin/composer
 fi
 
