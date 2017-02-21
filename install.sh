@@ -34,7 +34,7 @@ then
 fi
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/lumen-installer tightenco/jigsaw spatie/http-status-check
+/usr/local/bin/composer global require laravel/installer laravel/lumen-installer laravel/valet tightenco/jigsaw spatie/http-status-check
 
 # Install Laravel Valet
 #$HOME/.composer/vendor/bin/valet install

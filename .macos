@@ -19,3 +19,17 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+###############################################################################
+# Dock, Dashboard, etc                                                        #
+###############################################################################
+
+
+# Minimize into application icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Remove default dock items
+defaults write com.apple.dock persistent-apps -array
+
+# Show only open items in dock
+defaults write com.apple.dock static-only -bool true

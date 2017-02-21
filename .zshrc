@@ -5,11 +5,11 @@ export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="powerline"
+ZSH_THEME="robbyrussell"
 
 #Powerline Customizations
-POWERLINE_SHOW_GIT_ON_RIGHT="true"
-POWERLINE_DETECT_SSH="true"
+#POWERLINE_SHOW_GIT_ON_RIGHT="true"
+#POWERLINE_DETECT_SSH="true"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,7 +53,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(composer git git-extras npm sublime tmux vagrant)
+plugins=(composer git git-extras npm sublime vagrant)
 
 # Activate Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
@@ -71,6 +71,3 @@ export LANG=en_US.UTF-8
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"

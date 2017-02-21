@@ -2,7 +2,7 @@
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadcli="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias ll="$(brew --prefix coreutils)/libexec/gnubin/ls -ahlF --color --group-directories-first"
+alias ll="$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin/ls -ahlF --color --group-directories-first"
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias weather="curl -4 http://wttr.in"
@@ -11,6 +11,7 @@ alias weather="curl -4 http://wttr.in"
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
+alias ops="cd $HOME/Operations"
 
 # Laravel
 alias a="php artisan"
