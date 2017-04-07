@@ -28,8 +28,9 @@ brew 'git'
 brew 'go'
 brew 'imagemagick'
 brew 'mas'
-brew 'openssl'
 brew 'node'
+brew 'openssl'
+brew 'pngcrush'
 brew 'readline'
 brew 'tmux'
 brew 'unrar'
@@ -39,7 +40,7 @@ brew 'yarn'
 
 # Development
 brew 'php71', args: ['with-debug']
-brew 'php71-intl'
+brew 'phpunit'
 brew 'mariadb'
 
 #cask 'mapbox-studio'

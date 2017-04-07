@@ -21,3 +21,5 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Yarn
 export PATH="$PATH:`yarn global bin`"
+
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
