@@ -1,54 +1,62 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
 tap 'heroku/brew'
 
 # Install ZSH
 brew 'zsh'
 brew 'zsh-completions'
 
-# Install GNU core utilities (those that come with macOS are outdated)
-brew 'coreutils'
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew 'findutils'
-
-# Install more recent versions of some macOS tools
-brew 'homebrew/dupes/grep'
-
 brew 'awscli'
-brew 'composer'
+brew 'coreutils' # Install GNU core utilities (those that come with macOS are outdated)
+brew 'findutils' # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew 'ffmpeg'
 brew 'fswatch'
 brew 'gettext'
 brew 'git'
+brew 'gnupg'
+brew 'grep'
+brew 'httpie'
+brew 'hub'
+brew 'mas'
+brew 'openssl'
+brew 'stripe/stripe-cli/stripe'
+brew 'trash'
+brew 'unrar'
+brew 'wget'
+brew 'zlib' # Needed for Memcached
+
+# Media
+brew 'jpegoptim'
+brew 'pngquant'
+brew 'svgo'
+
+# Development
+brew 'brew-php-switcher'
+brew 'php'
+brew 'php@7.3', args: ['with-debug']
+brew 'php@7.4'
+brew 'composer'
 brew 'go'
 brew 'heroku'
 brew 'imagemagick'
+brew 'libmemcached'
 brew 'mariadb'
-brew 'mas'
-brew 'node'
-brew 'openssl'
-brew 'pngcrush'
-brew 'brew-php-switcher'
-brew 'php@7.3', args: ['with-debug']
-brew 'php@7.4'
+brew 'memcached'
 brew 'phpunit'
-brew 'readline'
+brew 'python'
+brew 'python3'
+brew 'redis'
 brew 'ruby'
 brew 'ruby-build'
 brew 'tmux'
-brew 'unrar'
 brew 'vim', args: ['--override-system-vi']
-brew 'wget'
 brew 'yarn'
-brew 'jq'
 
-# Development
+# Apps
 cask 'alfred'
 cask 'arq'
 cask 'diffmerge'
@@ -56,10 +64,14 @@ cask 'dropbox'
 cask 'firefox'
 cask 'google-drive'
 cask 'iterm2'
+cask 'insomnia'
+cask 'joplin'
 cask 'keepassxc'
+cask 'phpstorm'
 cask 'poedit'
 cask 'slack'
 cask 'sublime-text'
+cask 'tableplus'
 
 # Fonts
 cask 'font-sauce-code-powerline'
@@ -70,7 +82,6 @@ cask 'font-source-serif-pro'
 # Install App Store apps
 mas 'aText', id: 488566438
 mas 'Bear', id: 1091189122
-mas 'CloudApp', id: 417602904
 mas 'Harvest', id: 506189836
 mas 'Keka', id: 470158793
 mas 'Todoist', id: 585829637

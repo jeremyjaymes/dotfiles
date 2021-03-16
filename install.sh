@@ -22,22 +22,6 @@ brew bundle
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
-# Install Composer
-if test ! $(which composer)
-then
-  echo "  Installing Composer for you."
-
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    php -r "if (hash_file('SHA384', 'composer-setup.php') === '55d6ead61b29c7bdee5cccfb50076874187bd9f21f65d8991d46ec5cc90518f447387fb9f76ebae1fbbacf329e583e30') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    php composer-setup.php
-    php -r "unlink('composer-setup.php');"
-fi
-
-if [ -f composer.phar ]; 
-then
-  mv composer.phar /usr/local/bin/composer
-fi
-
 # Install global Composer packages
 /usr/local/bin/composer global require laravel/installer laravel/lumen-installer laravel/valet tightenco/jigsaw spatie/http-status-check
 
@@ -74,3 +58,9 @@ mkdir $HOME/Operations
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
+
+# Install RVM and Ruby
+source ./ruby/install.sh
+
+# Install python, pip and virtualenv
+source ./python/install.sh
