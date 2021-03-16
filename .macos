@@ -1,5 +1,30 @@
 #!/usr/bin/env bash
 
+# Thanks to Mathias Bynens!
+# ~/.macos — https://mths.be/macos
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
+
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "Irene"
+sudo scutil --set HostName "Irene"
+sudo scutil --set LocalHostName "Irene"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Irene"
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
 
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
@@ -10,19 +35,11 @@ chflags nohidden ~/Library
 # Default to 24 hour clock mode
 defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  H:mm:ss'
 
-###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
-
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-###############################################################################
-# Dock, Dashboard, etc                                                        #
-###############################################################################
 
 # Minimize into application icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -33,13 +50,11 @@ defaults write com.apple.dock persistent-apps -array
 # Show only open items in dock
 defaults write com.apple.dock static-only -bool true
 
-###############################################################################
-# Dock, Dashboard, etc                                                        #
-###############################################################################
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Set up Safari for development.
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
