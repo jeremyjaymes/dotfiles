@@ -58,7 +58,10 @@ brew 'yarn'
 
 # Apps
 cask 'alfred'
+cask 'appcleaner'
 cask 'arq'
+cask 'avira-antivirus'
+cask 'brave-browser'
 cask 'diffmerge'
 cask 'dropbox'
 cask 'firefox'
@@ -70,8 +73,10 @@ cask 'keepassxc'
 cask 'phpstorm'
 cask 'poedit'
 cask 'slack'
+cask 'sketch'
 cask 'sublime-text'
 cask 'tableplus'
+cask 'zoom'
 
 # Fonts
 cask 'font-sauce-code-powerline'
